@@ -1,6 +1,5 @@
-const button = document.querySelector("button")
 const main = document.querySelector("main")
-button.addEventListener("click", buscarUsuarios)
+
 
 async function buscarUsuarios() {
    const users = await fetch("http://localhost:3000").then((response) => response.json())
@@ -15,3 +14,5 @@ async function buscarUsuarios() {
     `
     })
 }
+
+buscarUsuarios()
